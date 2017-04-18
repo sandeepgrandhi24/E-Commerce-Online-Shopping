@@ -1,0 +1,157 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="OnlineShopping.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+   <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Admin-</title>
+
+    <!-- Core CSS - Include with every page -->
+    <link href="Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <!-- Page-Level Plugin CSS - Tables -->
+    <link href="Content/bootstrap/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="Content/bootstrap/css/sb-admin.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     
+    <div id="wrapper">
+
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="">Management</a>
+            </div>
+            <!-- /.navbar-header -->
+
+           <ul class="nav navbar-top-links navbar-right">
+              
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                <a href="LogOut.aspx"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        </li>
+                   
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+        </nav>
+        <!-- /.navbar-static-top -->
+
+       
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+
+                    <li>
+                        <a href="cmsAdmin.aspx"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Products<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="cmsBrands.aspx">Brands</a>
+                            </li>
+                            <li>
+                                <a href="cmsCategories.aspx">Category</a>
+                            </li>
+                            <li>
+                                <a href="cmsItems.aspx">Items</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>Inventory<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="cmsInventories.aspx">All Inventories</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-envelope fa-fw"></i>Customer Queries<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <%--<li>
+                                <a href="cmsQueries.aspx">Queries</a>
+                            </li>--%>
+                            <li>
+                                <a href="cmsFeedBack.aspx">FeedBack</a>
+                            </li>                           
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-table fa-fw"></i>Sales<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="cmsOrders.aspx"><i class="fa fa-files-o fa-fw"></i>Orders</a>
+                            </li>
+                           <%-- <li>
+                                <a href="cmsDateWiseOrders.aspx"><i class="fa fa-files-o fa-fw"></i>Date Wise Orders</a>
+                            </li>--%>
+                         
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+
+                    </ul>
+                    <!-- /#side-menu -->
+            </div>
+
+            <!-- /.sidebar-collapse -->
+        </nav>
+        <!-- /.navbar-static-side -->
+        
+    </div>
+   
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+     <!-- Page-Level Plugin Scripts - Tables -->
+    <script src="Content/bootstrap/js/jquery-1.10.2.js"></script>
+    <script src="Content/bootstrap/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="Content/bootstrap/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="Content/bootstrap/js/bootstrap.min.js")"></script>
+    <script src="Content/bootstrap/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <!-- SB Admin Scripts - Include with every page -->
+    <script src="Content/bootstrap/js/sb-admin.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+        $(document).ready(function () {
+            //$('#dataTables-example').dataTable();
+            //$('#dataTables-example1').dataTable();
+        });
+    </script>
+    <style>
+        form label.error {
+        font: 10px Tahoma,sans-serif;
+        color: #ED7476;
+        margin-left: 5px;
+    }
+    form input.error, form input.error:hover, form input.error:focus, form select.error,
+    form textarea.error {
+        border: 1px solid #ED7476;
+        background: #FFEDED;
+    }
+    </style>
+
+</body>
+</html>
